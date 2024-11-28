@@ -1,0 +1,195 @@
+/* BASIC */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --header-text: 1.2em;
+
+    --big-text: 1em;
+    --medium-text: 0.9em;
+    --small-text: 0.75em;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+/* MAIN LAYOUT */
+
+body {
+    width: 1280px;
+    height: 100vh;
+    margin: 0 auto;
+    background: #FAF4F1;
+
+    font-size: 26px;
+}
+
+    header {
+        height: 100px;
+        padding: 0 25px;
+        background: #FFB38C;
+        border-end-start-radius: 15px;
+        border-end-end-radius: 15px;
+    }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: inherit;
+        }
+
+            nav > * {
+                height: inherit;
+            }
+
+            .brand,
+            .panel {
+                display: flex;
+                align-items: center;
+            }
+
+                .brand > * {
+                    margin-right: 25px;
+                }
+
+                .brand > *:last-child {
+                    margin-right: 0;
+                }
+
+                .brand__logo {
+                    width: 85px;
+                    max-height: 100%;
+                }
+
+                .brand__decorate-line {
+                    width: 1px;
+                    height: 50px;
+                    background: #000;
+                }
+
+                .brand__text {
+                    font-size: var(--big-text);
+                }
+
+            /* .panel {
+                background: violet;
+            } */
+
+                .panel__option {
+                    display: flex;
+                }
+
+                    .panel__option * {
+                        font-size: var(--medium-text);
+                    }
+
+                    .panel__option.random a,
+                    .panel__option.search input[type="submit"] {
+                        display: flex;
+
+                        text-decoration: none;
+                        background: #c47145;
+                        padding: 10px 15px;
+                        border-radius: 10px;
+                        border: 0;
+                        
+                        box-shadow: 0 5px #96532e;
+                        transition: .15s ease-in-out;
+                    }
+
+                    .panel__option a:active,
+                    .panel__option.search input[type="submit"]:active {
+                        translate: 0 5px;
+                        box-shadow: 0 0 transparent;
+                    }
+
+                        .panel__option button {
+                            border: 0;
+                            background: none;
+                            cursor: pointer;
+                        }
+
+                        .panel__option.random img {
+                            width: 35px;
+                            height: 35px;
+                            margin-right: 15px;
+                        }
+
+                .panel__option.search {
+                    display: none;
+
+                    margin-left: 25px;
+                }
+
+                    .panel__option.search input[type="text"] {
+                        border: 0;
+                        border-radius: 10px;
+                        outline: none;
+                        padding: 10px 15px;
+                    }
+
+                    .panel__option.search input[type="submit"] {
+                        margin-left: 15px;
+                    }
+
+    footer {
+        position: sticky;
+        top: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 60px;
+        padding: 0 25px;
+        background: #FFB38C;
+        border-start-start-radius: 15px;
+        border-start-end-radius: 15px;
+    }
+
+        footer * {
+            text-align: center;
+            font-size: var(--medium-text);
+            font-style: italic;
+        }
+
+/* PARTIAL LAYOUT */
+
+    main {
+        padding: 25px;
+    }
+
+        .meal {
+            min-height: 450px;
+            width: 100%;
+        }
+
+            .meal__title {
+                font-weight: bold;
+                font-size: var(--header-text);
+                margin-bottom: 25px;
+            }
+
+            .meal__img {
+                float: left;
+                width: 450px;
+                height: 350px;
+                margin-right: 25px;
+                margin-bottom: 25px;
+                border: 1px solid #000;
+                border-radius: 15px;
+            }
+
+            .meal__descr {
+                font-size: var(--big-text);
+                width: 100%;
+                text-align: justify;
+            }

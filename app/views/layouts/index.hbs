@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СЛУЧАЙНАЯ ЕДА</title>
+    <link rel="stylesheet" href="/assets/styles/index.css">
+    <link rel="stylesheet" href="/assets/styles/media.css">
+    <link rel="icon" href="/assets/img/icon.svg">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="brand">
+                <img class="brand__logo" src="/assets/img/logo.svg" alt="logo">
+                <div class="brand__decorate-line"></div>
+                <p class="brand__text">Кулинарный рандомайзер</p>
+            </div>
+
+            <div class="panel">
+                <div class="panel__option random">
+                    <a href="/">
+                        <img src="/assets/img/random-symbol.svg" alt="random">
+                        <button>Перемешать</button>
+                    </a>
+                </div>
+
+                <form method="post" class="panel__option search">
+                    <input type="text" name="userText">
+                    <input type="submit" value="Поиск">
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {{{ body }}}
+    </main>
+
+    <footer>
+        <p>Сделано с использованием TheMealDB</p>
+    </footer>
+</body>
+</html>

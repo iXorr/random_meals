@@ -1,0 +1,9 @@
+{{#if meal }}
+
+    <div class="meal">
+        <h1 class="meal__title">Блюдо №{{ meal.id }} - {{ meal.title }}</h1>
+        <img class="meal__img" src="{{ meal.img }}" alt="food">
+        <p class="meal__descr">{{ meal.recipe }}</p>
+    </div>
+
+{{/if}}
